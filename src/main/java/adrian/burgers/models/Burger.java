@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -27,6 +28,7 @@ public class Burger {
   private String restaurantName;
 
   @NotNull
+  // @Size(min=1,max=5, message="thats not really your name!")
   private Integer rating;
 
   @NotNull
